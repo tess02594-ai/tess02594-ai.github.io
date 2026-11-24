@@ -1,0 +1,92 @@
+:root {
+  --bg: #fff7ed;
+  --ink: #2b2b2b;
+  --brand: #c1121f;
+  --brand2: #1d4ed8;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--brand2);
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+}
+
+nav a:hover, nav a.active { text-decoration: underline; }
+
+main { max-width: 900px; margin: auto; padding: 1rem; }
+
+img { max-width: 100%; height: auto; border-radius: 12px; }
+
+.card {
+  background: var(--card);
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  margin: 1rem 0;
+}
+
+.hero { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+
+.profile-pic {
+  width: 200px; height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--brand);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card:hover { transform: translateY(-4px); transition: .2s; }
+
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  padding: .6rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: .5rem; border-bottom: 1px solid #ddd; }
+
+input, textarea { width: 100%; padding: .5rem; font: inherit; border: 1px solid #999; border-radius: 8px; }
+
+footer { text-align: center; padding: 1.5rem; font-size: .9rem; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #14161c; --ink: #f1f1f1; --card: #1f2330; --brand: #e63946; }
+  th, td { border-bottom-color: #444; }
+  input, textarea { background: #2a2f3d; color: #f1f1f1; }
+}
+
+.card img.photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }

@@ -1,0 +1,28 @@
+-- Query 1
+SELECT * FROM profile;
+(1, 'Mueni Teresia', 'BSc. Environmental Science', 'Second-year JKUAT student from Machakos County, ambitious and curious, who loves learning, personal growth and meaningful connections. Dream job: Environmental Scientist and Wildlife Conservationist.')
+
+-- Query 2
+SELECT title, release_year FROM movie ORDER BY my_rank;
+('The Body', 2026)
+('The Notebook', 2004)
+('The Proposal', 2009)
+('Through My Window', 2022)
+('Anyone But You', 2023)
+
+-- Query 3
+SELECT title FROM movie WHERE release_year > 2010;
+('The Body',)
+('Through My Window',)
+('Anyone But You',)
+
+-- Query 4
+SELECT profile.full_name, hobby.hobby_name FROM profile JOIN hobby ON hobby.profile_id = profile.profile_id;
+('Mueni Teresia', 'Watching movies')
+('Mueni Teresia', 'Listening to music')
+('Mueni Teresia', 'Time with friends')
+
+-- Query 5
+SELECT COUNT(*) FROM skill;
+(5,)
+
